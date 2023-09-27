@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  mingin: 0;
+  box-sizing: border-box;
+}
+
+/*Small Phones*/
+@media screen and (min-width: 575px) {}
+/*Large Phones*/
+@media screen and (min-width: 768px) {}
+/*Tablets*/
+@media screen and (min-width: 1024px) {}
+/*Desktop*/
+@media screen and (min-width: 1280px) {}
+/*Large Desktops*/
+@media screen and (min-width: 1600px) {}
+
