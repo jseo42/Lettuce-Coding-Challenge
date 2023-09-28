@@ -141,7 +141,35 @@ select {
   z-index: 899; 
   animation: fade 0.3s ease-in;
 }
+.fullscreenNav .nav-links {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.link {
+  text-decoration: none;
+  position: relative; 
+}
 
+.link::after {
+  content: ""; 
+  position: absolute; 
+  left: 0;
+  bottom: -2px; 
+  width: 0%; 
+  border-bottom: 1px solid #fff; 
+  transition: width 0.3s ease; 
+}
+.link:hover::after {
+  width: 100%;
+}
+.fullscreenNav .nav-links a {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+}
 
 .overlay {
   position: fixed;
@@ -263,7 +291,6 @@ footer nav li {
   .reservationDetails {
     flex-direction: column;
   }
-  
   footer {
     display: flex;
     flex-direction: column;
