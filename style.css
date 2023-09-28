@@ -72,6 +72,17 @@ ul {
   list-style-type: none;
 }
 
+button {
+  background-color: #003152;
+  border-style: none;
+  color: #fff;
+  width: 200px;
+  height: 30px;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  
+}
 input {
   all: unset;
 }
@@ -103,6 +114,9 @@ select {
   margin: 6px 0;
   transition: 0.4s;
 }
+.hamburger.active div {
+ background-color:#fff;
+}
 
 .hamburger.active div:nth-child(1) {
   transform: rotate(-45deg) translate(-5px, 8px);
@@ -127,6 +141,8 @@ select {
   z-index: 899; 
   animation: fade 0.3s ease-in;
 }
+
+
 .overlay {
   position: fixed;
   top: 0;
@@ -140,7 +156,6 @@ select {
   align-items: center;
   text-align: center;
   z-index: 999;
-  color: #fff;
   animation: fade 0.3s ease-in;
 }
 .closeButton {
@@ -168,7 +183,7 @@ select {
   border-bottom: 1px solid black;
 }
 input[type="submit"] {
-  background-color: #15456e;
+  background-color: #003152;
   color: #fff;
 }
 
@@ -234,6 +249,7 @@ footer nav li {
     width: auto;
     height: auto;
   }
+  
   section {
     display: flex;
     flex-direction: column;
@@ -247,6 +263,7 @@ footer nav li {
   .reservationDetails {
     flex-direction: column;
   }
+  
   footer {
     display: flex;
     flex-direction: column;
