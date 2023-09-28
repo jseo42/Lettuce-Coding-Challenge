@@ -8,6 +8,8 @@ const reservation = document.getElementById('reservationDetails');
 const customer = document.getElementById('customerDetails');
 const success = document.getElementById('successMessage');
 const closeBtn = document.getElementById('closeButton')
+
+
 reservation.addEventListener('submit', (e) => {
   e.preventDefault();
   if (reservation.checkValidity()) {
@@ -29,7 +31,9 @@ customer.addEventListener('submit', (e) => {
 closeBtn.addEventListener('click', () => {
   success.classList.add('hidden');
   reservation.classList.remove('hidden');
+  customer.reset();
 });
+
 function toggleNav() {
   const fullscreenNav = document.getElementById('fullscreenNav');
   const hamburgerIcon = document.getElementById('hamburger');

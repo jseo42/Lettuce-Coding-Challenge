@@ -18,7 +18,6 @@ header {
   display: flex;
   align-items: center;
 }
-
 main section .image-container {
   width: 320px;
   height: 300px;
@@ -40,15 +39,20 @@ main section img.up42 {
   object-position: top;
 }
 main section .descriptionDiv {
-  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding: 1rem;
+  margin: 1rem;
+
 }
 main section .descriptionDiv p {
   text-align: center;
 }
+
 
 footer {
   background-image: url(./images/Aba-wood-1.jpg);
@@ -78,7 +82,7 @@ select {
   appearance: none;
   background-color: transparent;
   border: none;
-  padding: 0 1em 0 0;
+  padding: 0;
   margin: 0;
   width: 100%;
   font-family: inherit;
@@ -122,7 +126,7 @@ select {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.7); 
   z-index: 899; 
   animation: fade 0.3s ease-in;
 }
@@ -139,14 +143,42 @@ select {
   align-items: center;
   text-align: center;
   z-index: 999;
+  color: #fff;
+  animation: fade 0.3s ease-in;
 }
 .closeButton {
-  position: absolute;
-  top: 10px;
-  right: 10px;
   cursor: pointer;
   color: white;
   font-size: 24px;
+}
+
+.reservationDetails {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  min-width: 100vw;
+}
+
+input[type="submit"],
+input[type="date"],
+select {
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+input[type="submit"] {
+  background-color: #15456e;
+  color: #fff;
+}
+
+footer div.abaHour,
+footer div.abaLocation,
+footer div.miscLink a {
+  color: #fff;
 }
 .hidden {
   display: none;
@@ -192,10 +224,18 @@ select {
     width: auto;
     height: auto;
   }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   main section .image-container {
     width: 100%;
     height: 300px;
     overflow: hidden;
+  }
+  .reservationDetails {
+    flex-direction: column;
   }
 }
 /*Large Phones*/
@@ -206,4 +246,3 @@ select {
 @media screen and (min-width: 1280px) {}
 /*Large Desktops*/
 @media screen and (min-width: 1600px) {}
-
