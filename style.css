@@ -1,11 +1,203 @@
 * {
   padding: 0;
-  mingin: 0;
+  margin: 0;
   box-sizing: border-box;
 }
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background-image: url(./images/white-wood.jpeg);
+}
+header .logo {
+  margin: 1rem;
+  max-width: 100px;
+}
+header {
+  display: flex;
+  align-items: center;
+}
+
+main section .image-container {
+  width: 320px;
+  height: 300px;
+  overflow: hidden;
+}
+main section img {
+  width: 100%;
+  height: 100%;
+}
+main section img.up35Reg {
+  object-fit: cover;
+}
+main section img.up35Zoom {
+  object-fit: none;
+  object-position: 55% 49%;
+}
+main section img.up42 {
+  object-fit: cover; 
+  object-position: top;
+}
+main section .descriptionDiv {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+main section .descriptionDiv p {
+  text-align: center;
+}
+
+footer {
+  background-image: url(./images/Aba-wood-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+h1, h2, h3, h4, h5 {
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .18rem;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+
+input {
+  all: unset;
+}
+select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
+.hamburger {
+  display: none; 
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 900; 
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.hamburger.active div:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 8px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -8px);
+}
+
+.fullscreenNav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 899; 
+  animation: fade 0.3s ease-in;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 999;
+}
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+}
+.hidden {
+  display: none;
+}
+/* Key Frames */
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 /*Small Phones*/
-@media screen and (min-width: 575px) {}
+@media screen and (max-width: 479px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav {
+    flex-direction: column;
+    display: none;
+  }
+  header .logo {
+    max-width: 100px;
+  }
+  .hamburger {
+    display: block; 
+  }
+  .banner-grid {
+    min-width: 100vw;
+    
+    
+  }
+  .image1 {
+    display: none;
+  }
+  .image2 {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+  main section .image-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+}
 /*Large Phones*/
 @media screen and (min-width: 768px) {}
 /*Tablets*/
