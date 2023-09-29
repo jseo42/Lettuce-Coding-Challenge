@@ -120,8 +120,6 @@ form#customerDetails input[type="email"] {
   padding: 12px 20px;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-  background-color: #fff;
-  border-top: #333 solid 1px;
 }
 input[type="date"],
 select {
@@ -132,8 +130,6 @@ select {
   font-family: 'Montserrat', sans-serif;
   cursor: pointer;
   border: none;
-  background-color: #fff;
-  border-top: #333 solid 1px;
 }
 textarea:focus, input:focus{
   outline: none;
@@ -257,13 +253,23 @@ footer nav li {
 .customerDetails {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   text-align: center;
   min-width: 100vw;
+  border: 1px solid #000;
+}
+.reservationForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: #fff;
 }
 
 .appImg {
   display: none;
 }
+
 .hidden {
   display: none;
 }
@@ -296,6 +302,7 @@ footer nav li {
   }
   .banner-grid {
     min-width: 100vw;
+    object-fit: cover
   }
   img.image1 {
     display: none;
@@ -319,6 +326,7 @@ footer nav li {
   }
   .customerDetails {
     flex-direction: column;
+    background-color: #fff;
   }
   footer {
     display: flex;
@@ -341,12 +349,10 @@ footer nav li {
   }
 
   .appImg img {
-    max-width: 100px;
+    max-width: 120px;
   }
   
 }
-/*Large Phones*/
-@media screen and (min-width: 768px) {}
 /*Tablets*/
 @media screen and (min-width: 1024px) {}
 /*Desktop*/
