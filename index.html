@@ -15,11 +15,11 @@
     <img src="./images/Aba-Logo.png" alt="Logo" class="logo">
     <nav>
       <ul>
-        <li><a href="#">Reserve</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">Group Dining</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Team</a></li>
+        <li><a class="link" href="#">Reserve</a></li>
+        <li><a class="link" href="#">Menu</a></li>
+        <li><a class="link" href="#">Group Dining</a></li>
+        <li><a class="link" href="#">Events</a></li>
+        <li><a class="link" href="#">Team</a></li>
       </ul>
     </nav>
     <div class="hamburger" id="hamburger" onclick="toggleNav()">
@@ -29,11 +29,11 @@
     </div>
     <div class="fullscreenNav" id="fullscreenNav">
       <div class="nav-links">
-          <a class="link" href="#">Reserve</a>
-          <a class="link" href="#">Menu</a>
-          <a class="link" href="#">Group Dining</a>
-          <a class="link" href="#">Events</a>
-          <a class="link" href="#">Team</a>
+          <a href="#">Reserve</a>
+          <a href="#">Menu</a>
+          <a href="#">Group Dining</a>
+          <a href="#">Events</a>
+          <a href="#">Team</a>
       </div>
     </div>
   </header>
@@ -70,16 +70,14 @@
   
           <input type="submit" value="Find a Table" id="submitReservation">
         </form>
-        <form id="customerDetails" class="hidden">
+        <form id="customerDetails" class="customerDetails hidden">
           <h2>Customer Information</h2>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required><br>
+
+          <input type="text" id="name" name="name" placeholder="Full Name" required><br>
   
-          <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br>
-  
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required><br>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="(---) --- ----" required><br>
+
+          <input type="email" id="email" name="email" placeholder="example@email.com" required><br>
   
           <input type="submit" value="Submit" id="submitContact">
         </form>
@@ -101,9 +99,13 @@
       </div>
       <div class="descriptionDiv">
         <h2>Group Dining At Aba</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
           Provident, nulla fugiat! Temporibus magni numquam nihil aliquid molestiae, 
-          necessitatibus esse impedit cum fuga autem odit atque eligendi dicta rerum consequuntur illum?
+          necessitatibus esse impedit cum fuga autem odit atque eligendi dicta rerum consequuntur illum? 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ducimus, minus expedita 
+          perspiciatis porro nihil autem tenetur incidunt impedit laboriosam inventore consequatur 
+          obcaecati aut, eaque distinctio? Vel quos maxime excepturi!
         </p>
         <button>Plan Your Party</button>
       </div>
@@ -114,9 +116,13 @@
       </div>
       <div class="descriptionDiv">
         <h2>Wine Dinner</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur ßadipisicing elit. 
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
           Provident, nulla fugiat! Temporibus magni numquam nihil aliquid molestiae, 
-          necessitatibus esse impedit cum fuga autem odit atque eligendi dicta rerum consequuntur illum?
+          necessitatibus esse impedit cum fuga autem odit atque eligendi dicta rerum consequuntur illum? 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ducimus, minus expedita 
+          perspiciatis porro nihil autem tenetur incidunt impedit laboriosam inventore consequatur 
+          obcaecati aut, eaque distinctio? Vel quos maxime excepturi!
         </p>
         <br/>
         <br/>
@@ -130,9 +136,13 @@
       </div>
       <div class="descriptionDiv">
         <h2>About Aba</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
           Provident, nulla fugiat! Temporibus magni numquam nihil aliquid molestiae, 
-          necessitatibus esse impedit cum fuga autem odit atque eligendi dicta rerum consequuntur illum?
+          necessitatibus esse impedit cum fuga autem odit atque eligendi dicta rerum consequuntur illum? 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ducimus, minus expedita 
+          perspiciatis porro nihil autem tenetur incidunt impedit laboriosam inventore consequatur 
+          obcaecati aut, eaque distinctio? Vel quos maxime excepturi!
         </p>
       </div>
     </section>
