@@ -89,7 +89,7 @@ button {
   cursor: pointer;
 }
 input[type="submit"] {
-  border: none;
+  border-style: none;
 }
 
 select {
@@ -115,7 +115,6 @@ form#customerDetails input[type="text"],
 form#customerDetails input[type="tel"], 
 form#customerDetails input[type="email"] {
   font-size: 1.5rem;
-  border: none;
   width: 100%;
   padding: 12px 20px;
   box-sizing: border-box;
@@ -131,9 +130,7 @@ select {
   cursor: pointer;
   border: none;
 }
-textarea:focus, input:focus{
-  outline: none;
-}
+
 input[type="submit"] {
   background-color: #003152;
   color: #fff;
@@ -301,14 +298,18 @@ footer nav li {
     display: block; 
   }
   .banner-grid {
-    min-width: 100vw;
-    object-fit: cover
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
   }
   img.image1 {
     display: none;
   }
-  img.image2 {
-    max-width: 100%;
+  .banner-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   
   section {
@@ -344,12 +345,15 @@ footer nav li {
     margin: 1rem;
   }
   .appImg {
-    object-fit: cover;
+    width: 100%;
+    background-image: url(./images/white-wood.jpeg);
     display: block;
+    padding: 1rem;
   }
 
   .appImg img {
     max-width: 120px;
+    object-fit: cover;
   }
   
 }
