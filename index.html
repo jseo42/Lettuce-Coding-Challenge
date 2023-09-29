@@ -39,50 +39,56 @@
   </header>
   <section>
     <div class="banner-grid">
-      <img class="image1" src="./images/up-47.jpg" alt="up-47">
-      <img class="image2" src="./images/Aba_VillageSalad.jpg" alt="Village Salad">
+      <div class="banner-grid-container banner-grid-container-1">
+        <img class="image1" src="./images/up-47.jpg" alt="up-47">
+      </div>
+      <div class="banner-grid-container banner-grid-container-2">
+        <img class="image2" src="./images/Aba_VillageSalad.jpg" alt="Village Salad">
+      </div>
     </div>
   </section>
   <main>
     <section>
       <div id="reservationForm" class="reservationForm">
-        <form id="reservationDetails" class="reservationDetails">
+        <div id="form-container-res" class="form-container">
           <h2>Make A Reservation</h2>
-          <input type="date" id="date" name="date" required>
+          <form id="reservationDetails" class="reservationDetails">
+            <input type="date" id="date" name="date" required>
 
-          <select id="time" name="time" required>
-            <option value="16:00">4:00pm</option>
-            <option value="17:00">5:00pm</option>
-            <option value="18:00">6:00pm</option>
-            <option value="19:00">7:00pm</option>
-            <option value="20:00">8:00pm</option>
-            <option value="21:00">9:00pm</option>
-          </select>
-      
-          <select id="people" name="people"  required>
-            <option value="1">1 Person</option>
-            <option value="2">2 People</option>
-            <option value="3">3 People</option>
-            <option value="4">4 People</option>
-            <option value="5">5 People</option>
-            <option value="6">6 People</option>
-          </select>
-  
-          <input type="submit" value="Find a Table" id="submitReservation">
-        </form>
+            <select id="time" name="time" required>
+              <option value="16:00">4:00pm</option>
+              <option value="17:00">5:00pm</option>
+              <option value="18:00">6:00pm</option>
+              <option value="19:00">7:00pm</option>
+              <option value="20:00">8:00pm</option>
+              <option value="21:00">9:00pm</option>
+            </select>
+        
+            <select id="people" name="people"  required>
+              <option value="1">1 Person</option>
+              <option value="2">2 People</option>
+              <option value="3">3 People</option>
+              <option value="4">4 People</option>
+              <option value="5">5 People</option>
+              <option value="6">6 People</option>
+            </select>
     
-        <form id="customerDetails" class="customerDetails hidden">
+            <input type="submit" value="Find a Table" id="submitReservation">
+          </form>
+        </div>
+        <div id="form-container-customer" class="form-container hidden">
           <h2>Customer Information</h2>
+          <form id="customerDetails" class="customerDetails">
 
-          <input type="text" id="name" name="name" placeholder="Full Name" required><br>
-  
-          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="(---) --- ----" required><br>
+            <input type="text" id="name" name="name" placeholder="Full Name" required><br>
+    
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="(---) --- ----" required><br>
 
-          <input type="email" id="email" name="email" placeholder="example@email.com" required><br>
-  
-          <input type="submit" value="Submit" id="submitContact">
-        </form>
-  
+            <input type="email" id="email" name="email" placeholder="example@email.com" required><br>
+    
+            <input type="submit" value="Submit" id="submitContact">
+          </form>
+        </div>
         <div id="successMessage" class="hidden overlay">
           <h2>Reservation Successful!</h2>
           <p>Thank you for your reservation.</p>
@@ -94,7 +100,7 @@
       </div>
       
     </section>
-    <section>
+    <section class="section-flex">
       <div class="image-container">
         <img class="up35Reg" src="./images/up-35.jpg" alt="Food Item">
       </div>
@@ -111,7 +117,7 @@
         <button>Plan Your Party</button>
       </div>
     </section>
-    <section>
+    <section class="section-flex">
       <div class="image-container">
         <img class="up35Zoom" src="./images/up-35.jpg" alt="Food Item">
       </div>
@@ -131,7 +137,7 @@
         <button>Learn More</button>
       </div>
     </section>
-    <section>
+    <section class="section-flex">
       <div class="image-container">
         <img class="up42" src="./images/up-42.jpg" alt="Food Item">
       </div>

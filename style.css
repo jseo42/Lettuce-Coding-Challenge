@@ -18,13 +18,25 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 3em;
+}
+header nav {
+  width: 100%;
 }
 header nav ul {
   display: flex;
-
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 0 20px;
+}
+header nav ul li {
+  text-align: center;
+  padding: 0 10px;
 }
 header nav ul li a {
-  color: #000
+  color: #000;
 }
 main section .image-container {
   width: 320px;
@@ -40,11 +52,10 @@ main section img.up35Reg {
 }
 main section img.up35Zoom {
   object-fit: none;
-  object-position: 55% 49%;
 }
-main section img.up42 {
+main section .image-container .up42 {
   object-fit: cover; 
-  object-position: top;
+  object-position: center;
 }
 main section .descriptionDiv {
   display: flex;
@@ -53,8 +64,8 @@ main section .descriptionDiv {
   gap: 0.5rem;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
-  padding: 1rem;
-  margin: 1rem;
+  padding: 1em;
+  margin: 1em;
 }
 main section .descriptionDiv p {
   text-align: center;
@@ -88,23 +99,15 @@ button {
   text-transform: uppercase;
   cursor: pointer;
 }
+
+select,
+input {
+  width: 100%;
+  cursor: inherit;
+  border-right: 1px solid;
+}
 input[type="submit"] {
   border-style: none;
-}
-
-select {
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  font-family: inherit;
-  font-size: inherit;
-  cursor: inherit;
-  line-height: inherit;
-}
-input[type="submit"] {
   width: 100%;
   border: none;
   font-family: 'Montserrat', sans-serif;
@@ -114,36 +117,40 @@ input[type="submit"] {
 form#customerDetails input[type="text"], 
 form#customerDetails input[type="tel"], 
 form#customerDetails input[type="email"] {
-  font-size: 1.5rem;
+  font-size: 1rem;
   width: 100%;
-  padding: 12px 20px;
+  height: 50px;
+  padding: 10px 18px;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  border-style: none;
+  border-right: 1px solid;
 }
 input[type="date"],
 select {
+  background-color: #fff;
   text-align: center;
   width: 100%;
   height: 50px;
-  padding: 0;
+  font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
   cursor: pointer;
-  border: none;
+  appearance: none; 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  border-style: none;
+  border-right: 1px solid;
 }
-
 input[type="submit"] {
   background-color: #003152;
   color: #fff;
 }
-
 footer .abaLocation {
   margin-top: 1rem;
 }
-
 footer nav {
   margin-top: 1rem;
 }
-
 footer a {
   color: #fff;
 }
@@ -252,15 +259,22 @@ footer nav li {
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  min-width: 100vw;
-  border: 1px solid #000;
+  width: 100%;
+  height: 100%;
+  border: 1px solid;
 }
 .reservationForm {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  background-color: #fff;
+  gap: 2em;
+  margin: 1em;
+}
+.form-container {
+  width: 100%;
+}
+.image-container {
+  object-fit: cover;
 }
 
 .appImg {
@@ -282,7 +296,7 @@ footer nav li {
 
 
 /*Small Phones*/
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 1023px) {
   header {
     flex-direction: column;
     align-items: center;
@@ -293,6 +307,46 @@ footer nav li {
   }
   header .logo {
     max-width: 100px;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+  }
+  footer nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  footer nav ul {
+    text-align: center;
+  }
+  footer nav ul li {
+    margin: 1em;
+  }
+  footer nav ul li a {
+    font-size: 0.8rem;
+  }
+
+  main section .image-container img.up35Zoom {
+    object-fit: none;
+  }
+  main section .image-container img.up42,
+  main section .image-container img.up35Reg {
+    object-fit: cover; 
+    object-position: center;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main section .image-container {
+    min-width: 80%;
+    height: 300px;
+    overflow: hidden;
   }
   .hamburger {
     display: block; 
@@ -311,16 +365,9 @@ footer nav li {
     height: 100%;
     object-fit: cover;
   }
-  
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  main section .image-container {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
+  .reservationForm {
+    min-width: 100vw;
+    text-align: center;
   }
   .reservationDetails {
     flex-direction: column;
@@ -329,37 +376,67 @@ footer nav li {
     flex-direction: column;
     background-color: #fff;
   }
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
-  }
-  footer nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-  }
-  footer nav li {
-    margin: 1rem;
-  }
+  
+  
   .appImg {
     width: 100%;
     background-image: url(./images/white-wood.jpeg);
     display: block;
-    padding: 1rem;
+    padding: 1em;
   }
 
   .appImg img {
     max-width: 120px;
     object-fit: cover;
   }
-  
 }
-/*Tablets*/
-@media screen and (min-width: 1024px) {}
-/*Desktop*/
-@media screen and (min-width: 1280px) {}
-/*Large Desktops*/
-@media screen and (min-width: 1600px) {}
+/*Tablets + Desktop*/
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 0 1em;
+  }
+  .banner-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1em;
+    align-items: stretch;
+  }
+  .banner-grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .banner-grid-container-1 {
+    width: 100%; 
+    height: 100%;
+  }
+  .banner-grid-container-2 {
+    width: 100%; 
+    height: 100%; 
+  }
+  .banner-grid img {
+    width: 100%;
+    height: 100%;
+  }
+  .banner-grid-container-1 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: none;
+    object-position: 70% 100%;
+  }
+  .banner-grid-container-2 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .form-container {
+    text-align: center;
+  }
+  .reservationForm {
+    padding: 20px 50px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+  }
+}

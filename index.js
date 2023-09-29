@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const date = document.getElementById('date')
   date.value = currentDate;;
 });
-
+const resFormContainer = document.getElementById('form-container-res');
+const customerFormContainer = document.getElementById('form-container-customer');
 const reservation = document.getElementById('reservationDetails');
 const customer = document.getElementById('customerDetails');
 const success = document.getElementById('successMessage');
@@ -13,8 +14,8 @@ const closeBtn = document.getElementById('closeButton')
 reservation.addEventListener('submit', (e) => {
   e.preventDefault();
   if (reservation.checkValidity()) {
-    reservation.classList.add('hidden');
-    customer.classList.remove('hidden');
+    resFormContainer.classList.add('hidden');
+    customerFormContainer.classList.remove('hidden');
   } else {
     alert('Please fill all required fields');
   }
@@ -22,7 +23,7 @@ reservation.addEventListener('submit', (e) => {
 customer.addEventListener('submit', (e) => {
   e.preventDefault();
   if (customer.checkValidity()) {
-    customer.classList.add('hidden')
+    customerFormContainer.classList.add('hidden')
     success.classList.remove('hidden');
   } else {
     alert('Please fill all required fields');
@@ -30,7 +31,7 @@ customer.addEventListener('submit', (e) => {
 });
 closeBtn.addEventListener('click', () => {
   success.classList.add('hidden');
-  reservation.classList.remove('hidden');
+  resFormContainer.classList.remove('hidden');
   customer.reset();
 });
 
