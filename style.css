@@ -12,6 +12,7 @@ body {
 }
 p, form#customerDetails input[type="text"], form#customerDetails input[type="tel"], form#customerDetails input[type="email"], select, input {
   font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, a, button {
@@ -147,7 +148,7 @@ form#customerDetails input[type="email"] {
   font-family: 'Montserrat', sans-serif;
   border-style: none;
   border-right: 1px solid;
-  
+
 }
 input[type="date"],
 select {
