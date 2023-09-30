@@ -10,9 +10,8 @@ html, body {
 body {
   background-image: url(./images/white-wood.jpeg);
 }
-p, form#customerDetails input[type="text"], form#customerDetails input[type="tel"], form#customerDetails input[type="email"], select, input {
+p, form#customerDetails input[type="text"], form#customerDetails input[type="tel"], form#customerDetails input[type="email"], input[type="date"], select, input {
   font-family: 'Montserrat', sans-serif;
-  box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, a, button {
@@ -163,6 +162,8 @@ select {
   -webkit-appearance: none; 
   -moz-appearance: none; 
   border-style: none;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 .hamburger {
