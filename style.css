@@ -1,4 +1,4 @@
-/* Default CSS made for mobile*/
+
 * {
   padding: 0;
   margin: 0;
@@ -9,7 +9,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-image: url('./images/white-wood.jpeg');
+  background-image: url('images/white-wood.jpeg');
 }
 ul {
   list-style-type: none;
@@ -23,28 +23,28 @@ button {
   text-transform: uppercase;
   cursor: pointer;
 }
-p, form#customerDetails input[type="text"], form#customerDetails input[type="tel"], form#customerDetails input[type="email"], input[type="date"], select, input {
+p, form#customerDetails input[type="text"],  form#customerDetails input[type="tel"], form#customerDetails input[type="email"], input[type="date"], select, input {
   font-family: 'Montserrat', sans-serif;
 }
 input[type="submit"] {
-  height: 50px;
+  font-size: 1rem;
+  height: 40px;
   background-color: #003152;
   color: #fff;
   border-style: none;
   width: 100%;
-  border: none;
+  outline: 1px solid black;
 }
 input#date, input#phone, input#name, input#email, select#time, select#people {
   outline: 1px solid black;
   font-size: 1rem;
   appearance: none; 
-  -webkit-appearance: none; 
-  -moz-appearance: none; 
-  height: 50px;
+  height: 40px;
   border-style: none;
   width: 100%;
   text-align: center;
   background-color: #fff;
+  display: block;
 }
 h1, h2, h3, h4, h5, a, button {
   font-family: 'Playfair Display', serif;
@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, a, button {
 
 /* Header */
 .header {
-  background-image: url('./images/Aba_VillageSalad.jpg');
+  background-image: url('images/Aba_VillageSalad.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -81,6 +81,10 @@ h1, h2, h3, h4, h5, a, button {
 .logo {
   display: none;
 }
+.banner-grid {
+  display: none;
+  
+}
 .background-overlay {
   position: absolute;
   top: 0;
@@ -96,20 +100,16 @@ header nav {
 
 /* Main */
 main section .image-container {
-  width: 100%;
+  min-width: 100%;
   height: 300px;
 }
-
 main img {
   width: 100%;
   height: 100%;
-}
-main img.up35Reg, main img.up42 {
   object-fit: cover;
 }
-main img.up35Zoom {
-  object-fit: cover;
-}
+
+
 main section .descriptionDiv {
   display: flex;
   flex-direction: column;
@@ -125,8 +125,8 @@ main section .descriptionDiv {
 
 /* Footer */
 footer {
-  background-image: url('./images/Aba-wood-1.jpg');
-  background-size: cover;
+  background-image: url('images/Aba-wood-1.jpg');
+  background-size: none;
   background-repeat: no-repeat;
   color: #fff;
   width: 100%;
@@ -245,7 +245,6 @@ footer nav li {
   display: flex;
   align-items: center;
   flex-direction: column;
-  
 }
 .reservationForm {
   display: flex;
@@ -263,7 +262,7 @@ footer nav li {
 
 .appImg {
   width: 100%;
-  background-image: url(./images/white-wood.jpeg);
+  background-image: url('images/white-wood.jpeg');
   display: block;
   padding: 1em;
   display: flex;
@@ -298,7 +297,9 @@ footer nav li {
     height: auto;
     align-items: center;
     gap: 2em;
-    margin: 3em;
+    margin-top: 3em;
+    margin-left: 3em;
+    margin-right: 3em;
   }
   .header-content {
     width: 150px;
@@ -328,7 +329,8 @@ footer nav li {
     align-items: center;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
-    padding: 0 20px;
+    padding: 10px 20px;
+    margin: 0 20px;
   }
   header nav ul li {
     text-align: center;
@@ -343,10 +345,66 @@ footer nav li {
   }
   .hamburger {
     display: none;
-  }  
-  section .banner-grid .banner-grid-container {
-    display: block;
   }
+  .banner-grid {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-gap: 1em;
+    margin: 0 1em;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner-grid-container {
+    min-width: 100%;
+    height: 600px;
+  }
+  .image1, .image2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .image1 {
+    object-position: center 80%;
+  }
+  .image2 {
+    object-position: center center;
+  }
+  form {
+    width: 100%;
+    display: flex;
+    margin-top: 1em;
+  }
+ 
+  .reservationForm {
+    margin: 3em;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  .form-container {
+    padding: 2em 4em;
+  }
+  .form-container h2 {
+    margin: 0;
+  }
+  section {
+    padding: 3em;
+  }
+  section.section-flex {
+    display: flex;
+    align-items: center;
+  }
+  section.section-flex.reverse {
+    flex-direction: row-reverse;
+  }
+  main section .descriptionDiv {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 2em 4em;
+  }
+  main section .image-container {
+    min-width: 350px;
+    min-height: 350px;
+  } 
   .link {
     text-decoration: none;
     position: relative; 
@@ -363,5 +421,30 @@ footer nav li {
   }
   .link:hover::after {
     width: 100%;
+  }
+  footer {
+    min-width: 100vw;
+    min-height: 400px;
+    justify-content: space-between;
+  }
+  footer nav {
+    justify-content: center;
+  }
+  .abaInfo {
+    flex-direction: row;
+    gap: 5em;
+    min-width: 100%;
+    justify-content: flex-end;
+    padding: 3em 12em 0 12em;
+  }
+  .abaHour, .abaLocation {
+    text-align: left;
+  }
+  ul {
+    display: flex;
+
+  }
+  .appImg {
+    display: none;
   }
 }
