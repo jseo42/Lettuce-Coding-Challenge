@@ -45,6 +45,7 @@ input#date, input#phone, input#name, input#email, select#time, select#people {
   width: 100%;
   text-align: center;
   background-color: #fff;
+  text-align-last: center;
   
 }
 h1, h2, h3, h4, h5, a, button {
