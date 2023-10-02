@@ -110,8 +110,6 @@ main img {
   height: 100%;
   object-fit: cover;
 }
-
-
 main section .descriptionDiv {
   display: flex;
   flex-direction: column;
@@ -242,18 +240,9 @@ footer nav li {
 }
 
 /* Form */
-.reservionDetails,
-.customerDetails {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
 .reservationForm {
-  display: flex;
-  flex-direction: column;
   text-align: center;
-  align-items: center;
-  gap: 2em;
+  
 }
 .form-container {
   width: 100%;
@@ -372,6 +361,9 @@ footer nav li {
   .image2 {
     object-position: center center;
   }
+  main img.up35Zoom {
+    object-fit: none;
+  }
   form#customerDetails.customerDetails,form#reservationDetails.reservationDetails {
     display: flex;
     flex-direction: row;
@@ -428,6 +420,7 @@ footer nav li {
     min-width: 100vw;
     min-height: 400px;
     justify-content: space-between;
+    background-size: auto;
   }
   footer nav {
     justify-content: center;
